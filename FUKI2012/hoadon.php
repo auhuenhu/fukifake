@@ -37,7 +37,7 @@ if(isset($_SESSION['user']))
         <div class="col-md-4"></div>
         <div class="col-md-4"></div>
         <div class="col-md-4 text-right">
-            <h5 style="font-weight: bold;"> Xin chào ❗  <?php print_r($_SESSION['user']) ?> 💋</h5>
+            <h5 style="font-weight: bold;"> Xin chào !  <?php print_r($_SESSION['user']) ?> </h5>
         </div>
 
     </div>
@@ -84,7 +84,7 @@ $data = $tam->fetchAll();
 <div class="container-fluid">
 
 <div class="col-md-7"style="padding-left:60px;border-right: 1px dotted #737373">
-<h2> 5THEWAY® </h2>
+<h2> FUKIFRIENDS </h2>
 
 <h4> ĐẶT HÀNG THÀNH CÔNG </h4>
 
