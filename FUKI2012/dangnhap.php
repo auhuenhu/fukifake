@@ -24,7 +24,7 @@ session_start();
 <body>
 	<div class="col-md-6 text-center " style="border-right: 1px dotted #737373;">
 		<h1 style="line-height: 580px;font-weight: bold;">ĐĂNG NHẬP </h1>
-		<div style="border-top: 2px solid #000"></div>
+		
 	</div>
 	<div class="col-md-6">
 		
@@ -64,40 +64,32 @@ $mail= $_POST['email'];
 			<?php
 			
 		}
-	
+
 				foreach ($data as $value) {
 			$_SESSION['user'] = $value['tenkh'];
-?>
-
-		<?php
-		
-		
-
-		$sql= 'select email from admin';
-		$tam=$conn->query ($sql);
-		$da = $tam->fetchAll();
-		foreach ($da as  $v) {
-			if($_POST['email']== $v['email'])
-		{
-		header('location:admin.php');
-
-		}
-		else
-			{ 
 		header('location:index.php');
 
-			}
+			
 		}
-		
 
-}
+$sql= "select * from admin where matkhauad='$mkmahoa' and email ='$mail' ";
+		$tam=$conn->query ($sql);
+		$da = $tam->fetchAll();
+foreach ($da as $v) {
+			$_SESSION['ad'] = $v['hoten'];
+		header('location:admin.php');
 
-}
-
-		
+			
 	
 
+}
+
+		
+	}
+
+
 ?>
+
 			</div>
 					
 
