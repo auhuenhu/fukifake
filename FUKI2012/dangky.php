@@ -111,6 +111,7 @@ if(isset($_POST['btnDangKy']))
 
 if(!$err)
 {
+	echo "Đăng ký thành công";
 	 $sql = "INSERT INTO khachhang VALUES (
  '".$_POST['ho-ten']."', 
  
