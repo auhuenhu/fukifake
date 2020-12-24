@@ -244,7 +244,7 @@ else
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td > <a href="sanpham.php?id=<?php 
+                    <td > <a href="sanpham/sanpham.php?id=<?php 
                     if(isset($v['id']))
                     { echo $v['id'] ;}
                     else 
