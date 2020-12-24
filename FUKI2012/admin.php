@@ -27,21 +27,19 @@
   <?php
 session_start();
 
-if(isset($_SESSION['user']))
+if(isset($_SESSION['ad']))
 {
   ?>
   <div class="row text-center">
       <div class="col-md-4"></div>
-      <div class="col-md-4">    <h5 style="font-weight: bold;line-height: 50px;">Xin chào Admin:  <?php print_r($_SESSION['user']) ?> </h5> </div>
+      <div class="col-md-4">    <h5 style="font-weight: bold;line-height: 50px;">Xin chào Admin:  <?php print_r($_SESSION['ad']) ?> </h5> </div>
       <div class="col-md-4 ">
          <form style="text-align: right; margin: 10px 10px" method="POST" action="dangxuat.php">
       <input   type="submit" name="btnDangXuat" value="Đăng xuất" style=" height: 40px;margin-top: 0;background: #fff">
     </form> 
       </div>
     </div>
-<?php
-}
- ?>
+
 </div>
 
 
@@ -62,15 +60,15 @@ if(isset($_SESSION['user']))
   </div>
  
 </div>
+<?php }else {
+ echo "Không có quyền truy cập trang Admin";
+} ?>
 </body>
 
 </html>
-<!-- <script>
-$(document).ready(function(){
-  $("#qldh").click(function(){
-    $("#tra-ve").load("quanlydonhang.php");
-  });
-});
-</script> -->
+
+  
+
+
   
 
