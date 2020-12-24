@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+
 include 'connect.php' ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,11 +18,32 @@ include 'connect.php' ?>
 	<body id="myPage">
 		<div class="container-fluid">
 			<div>
-				<?php
-				if(isset($_SESSION['user']))
+				<?php 
+				if(isset($_SESSION['ad']))
 				{
-				?>
-				<div class="row">
+					?>
+						<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4"></div>
+					<div class="col-md-4 text-right">
+						<span style="font-weight: bold;"> Xin chào !  <?php print_r($_SESSION['ad']) ?> </span>
+						<form method="POST" action="dangxuat.php">
+							<input   type="submit" name="btnDangXuat" value="Đăng xuất" style=" height: 20px;margin-top: 0;background: #fff;border: none;">
+						</form>
+						<a href="admin.php">ADMIN</a>
+					</div>
+				</div>
+
+
+					<?php
+					
+				}
+				else
+				{
+					if(isset($_SESSION['user']))
+					{
+							?>
+						<div class="row">
 					<div class="col-md-4"></div>
 					<div class="col-md-4"></div>
 					<div class="col-md-4 text-right">
@@ -30,9 +53,19 @@ include 'connect.php' ?>
 						</form>
 					</div>
 				</div>
-				<?php
+
+
+					<?php
+					}
+				
 				}
-				?>
+				
+
+					?>
+						
+
+
+					
 			</div>
 			<div class="row " >
 				<div class="col-md-4 "> </div>
